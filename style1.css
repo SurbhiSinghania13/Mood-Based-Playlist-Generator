@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff5e00; /* Nice blue color */
+    color: #fff;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #ff5e00; /* Nice blue color */
+    /* margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; */
+}
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 80px;
+    color: #fff; /* White color for the heading */
+    margin-bottom: 20px;
+}
+h4{
+    margin-top: 0px;
+    font-family: "Lobster", sans-serif;
+}
+p {
+    margin-top: 40px;
+    color: #fff; /* White color for the text */
+    font-size: 18px;
+    text-align: center;
+    width: 70%; /* Adjust the width of the paragraph */
+    /* margin-bottom: 20px; */
+}
+.form-group {
+    width: 70%; 
+    margin-bottom: 20px;
+}
+#output {
+    display: none;
+    padding: 0;
+}
+.btn-primary {
+    width: 70%; /* Match the width of the paragraph */
+}
+/* .background {
+    background-size: cover;
+    width: 60vh;
+    height: 50vh;
+} */
+#songList {
+    list-style: none;
+}
+
+
+#songList li:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+/* button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+} */
+
+/* #background {
+    background-size: cover;
+    width: 60vh;
+    height: 50vh;
+} */
+
+.highlighted {
+    color: #007BFF;
+}

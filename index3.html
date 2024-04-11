@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-based Playlist Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+
+<!-- Header -->
+<div class="container">
+    <h1>Mood Playlist</h1>
+        <h4>Generator</h4>
+    <p>Create personalized playlists based on your mood! The Mood-based Playlist Generator is your go-to destination for personalized music playlists tailored to your emotions. Simply select your mood from our intuitive dropdown menu and discover curated playlists that perfectly match your vibe. With an elegant design and seamless navigation, it's never been easier to find the perfect soundtrack for every moment.</p>
+
+    <!-- Dropdown for selecting mood -->
+    <div class="form-group">
+        <label for="moodSelect">Choose a mood:</label>
+        <select id="moodSelect" class="form-control" onchange="changeMood()">
+            <!-- Initial disabled option -->
+            <option value="X" selected disabled>CHOOSE ONE</option>
+            <!-- Mood options -->
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="relaxed">Relaxed</option>
+        </select>
+    </div>
+</div>
+
+<!-- Section for displaying selected mood, song list, audio player, and background -->
+<section id="output" class="mt-2">
+    <div class="container">
+        <!-- Display selected mood with associated JavaScript update -->
+        <h2>Selected Mood: <span id="selectedMood">Happy</span></h2>
+
+        <!-- Heading for the list of songs -->
+        <h3>Songs for the Selected Mood:</h3>
+
+        <!-- List to display songs dynamically -->
+        <ul id="songList" class="list-group"></ul>
+
+        <!-- Audio player with controls, loop, and autoplay -->
+        <audio controls loop autoplay id="audioPlayer" class="mt-3">
+            <!-- Source element for audio file  -->
+            <source id="audioSource" src="" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <!-- Button to skip to the next song with associated JavaScript function -->
+        <button onclick="skipSong()" class="btn btn-primary mt-3">Skip</button>
+
+        <!-- Empty div for displaying background images related to the mood -->
+        <div class="background mt-3" id="background"></div>
+    </div>
+</section>
+
+<!-- Profile and options -->
+<!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="./images/pimage.jpeg" width="30" height="30" class="rounded-circle" alt="Profile Picture">
+    </button>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">Settings</a>
+        <div class="dropdown-divider"></div> 
+        <a class="dropdown-item" href="#">Log out</a>
+    </div>
+</div> -->
+
+<!-- Bootstrap JS and jQuery (optional, if needed) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Your custom script -->
+<script src="script.js"></script>
+</body>
+</html>
